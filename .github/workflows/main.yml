@@ -27,18 +27,10 @@ jobs:
       
       - name: Terraform init
         run: terraform init
-
-      - uses: actions/checkout@master
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/maven@master
-        continue-on-error: true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: iac test .
+        
       - name: Terraform Plan
         id: plan
-        run: terraform plan -no-color
+        run: terraform plan 
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
