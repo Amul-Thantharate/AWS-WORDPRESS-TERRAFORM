@@ -27,7 +27,7 @@ jobs:
 
       - name: Terraform Format
         id: fmt
-        run: terraform fmt -check -no-color
+        run: terraform fmt -check
 
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
