@@ -1,0 +1,12 @@
+region = "ap-southeast-1"
+vpc-cidr = "192.168.0.0/16"
+public-subnet-cidr = ["192.168.1.0/24", "192.168.2.0/24"]
+private-subnet-cidr = ["192.168.5.0/24", "192.168.6.0/24"]
+aws_azs = ["ap-southeast-1a", "ap-southeast-1b"]
+instance_type = "t3.2xlarge"
+volume_size = 20
+rds_instance_class = "db.t3.micro"
+rds_admin_username = "admin"
+rds_admin_password = "Redhat123"
+rds_storage_size = 10
+rds_db_name = "mydb"
