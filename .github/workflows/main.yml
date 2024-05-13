@@ -34,7 +34,9 @@ jobs:
         continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-
+      - name: Running Synk Scan 
+        run: snyk iac test .
+        
       - name: Terraform Plan
         id: plan
         run: terraform plan -no-color
